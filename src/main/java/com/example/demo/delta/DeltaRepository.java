@@ -1,6 +1,3 @@
-// responsible for access to db
-//will be used in DeltaService
-
 package com.example.demo.delta;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -23,6 +20,4 @@ public interface DeltaRepository // from JpaRepository receives methods
             "WHERE delta.time > ?1 " +
             "AND delta.time < ?2")
     List<Delta> findDeltasByDate(Timestamp startTime, Timestamp endTime);
-
-
 }

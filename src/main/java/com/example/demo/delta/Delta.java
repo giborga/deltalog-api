@@ -1,37 +1,32 @@
 package com.example.demo.delta;
 
 import lombok.*;
-
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-@Data //get rid of boilerplate code
-@Entity // hibernate
-@Table // map class to a table in database
-@Getter
-@Setter
-@EqualsAndHashCode
-@AllArgsConstructor
+@Data
+@Entity
+@Table
 
 public class Delta {
 
     @Id
     @GeneratedValue(
-            strategy = GenerationType.SEQUENCE
+        strategy = GenerationType.SEQUENCE
     )
     private Long id;
     private String operation;
     private String path;
     private Timestamp time = new Timestamp(System.currentTimeMillis());
 
-    public Delta() {
-    }
+//    public Delta() {
+//    }
 
-    public Delta(String operation,
-                 String path) {
-        this.operation = operation;
-        this.path = path;
-    }
+//    public Delta(String operation,
+//                 String path) {
+//        this.operation = operation;
+//        this.path = path;
+//    }
 
     @Override
     public String toString() {

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@RestController //serves REST endpoints
+@RestController
 @RequestMapping
 
 public class DeltaController {
