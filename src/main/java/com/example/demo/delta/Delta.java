@@ -19,15 +19,6 @@ public class Delta {
     private String path;
     private Timestamp time = new Timestamp(System.currentTimeMillis());
 
-//    public Delta() {
-//    }
-
-//    public Delta(String operation,
-//                 String path) {
-//        this.operation = operation;
-//        this.path = path;
-//    }
-
     @Override
     public String toString() {
         return "Delta{" +

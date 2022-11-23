@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -29,7 +30,7 @@ public class DeltaController {
     }
 
     @PostMapping(path="/delta-logs")
-    public List<Delta> retrieveDeltas(@RequestBody Interval interval) {
+    public Map<String, List<String>> retrieveDeltas(@RequestBody Interval interval) {
         return deltaService.retrieveDeltasFromLog(interval.getStartDate(), interval.getEndDate());
     }
 

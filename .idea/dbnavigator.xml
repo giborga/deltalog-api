@@ -13,7 +13,15 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a5912cf1-c05a-44a4-9c4a-340392af1f82">
-      <console name="Connection" type="STANDARD" schema="delta" session="Main" />
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT delta.path
+FROM Delta delta
+WHERE delta.time > '2021-11-22T14:00:28.909+00:00'
+AND delta.time < '2023-11-22T14:00:28.909+00:00'
+AND delta.operation = 'REMOVE';
+
+
+SELECT *
+FROM delta;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -21,6 +29,9 @@
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -510,5 +521,8 @@
         </visibility-settings>
       </environment>
     </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
   </component>
 </project>
